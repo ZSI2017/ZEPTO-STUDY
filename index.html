@@ -4,7 +4,8 @@
   <head>
     <meta charset="utf-8">
     <title>zepto</title>
-   <script src="./zepto@1.1.6.js"></script>
+<!-- <script src="./zepto@1.1.6.js"></script> -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
    <ul>
@@ -18,7 +19,42 @@
      <li class="li2">8</li>
    </ul>
    <li class="other"></li>
+<table>
+   <td>
+    <input type="hidden" class="uri" value="123">
+    <a href="javascript:;" data-am-modal="{target: '#grade-box-success', closeViaDimmer: 0, width: 400, height: 250}" class="click-grade1"><i class="am-icon-paint-brush"></i> 审核通过 </a>
+</td>
+<td>
+    <input type="hidden" class="uri" value="456">
+    <input type="hidden" class="uri" value="222">
+    <a href="javascript:;" data-am-modal="{target: '#grade-box-success', closeViaDimmer: 0, width: 400, height: 250}" class="click-grade2"><i class="am-icon-paint-brush"></i> 审核通过 </a>
+</td>
+<td>
+    <input type="hidden" class="uri" value="789">
+    <a href="javascript:;" data-am-modal="{target: '#grade-box-success', closeViaDimmer: 0, width: 400, height: 250}" class="click-grade3"><i class="am-icon-paint-brush"></i> 审核通过 </a>
+</td>
+</table>
     <script>
+
+    var obj = {
+    valueOf:function(){
+        console.log(1)
+        return "adfasdf";
+    },
+
+    toString:function(){
+        console.log(2)
+        return 123;
+    }
+};
+
+
+ console.log(Number(obj));
+
+    $("a").click(function(){
+       console.log($(this).siblings(".dadf").val())
+      // console.log($(this).siblings())
+    })
          function print(param){
              console.log(param);
          }

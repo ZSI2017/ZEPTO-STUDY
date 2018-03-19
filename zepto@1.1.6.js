@@ -28,6 +28,7 @@ var Zepto = (function() {
     simpleSelectorRE = /^[\w-]*$/,
     class2type = {},
     toString = class2type.toString,
+    // 这里定义 zepot 变量
     zepto = {},
     camelize, uniq,
     tempParent = document.createElement('div'),
@@ -607,7 +608,7 @@ var Zepto = (function() {
       })
     },
       // before   => insertBefore  定义了简写的方法
-      //
+      //qsa
     replaceWith: function(newContent){
       // 当前元素的前面插入新元素后，删除当前元素，则实现了替换操作
       return this.before(newContent).remove()
