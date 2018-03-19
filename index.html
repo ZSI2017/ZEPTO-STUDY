@@ -16,9 +16,15 @@
      <li id="id6" class="li2">6</li>
      <li class="li2">7</li>
      <li class="li2">8</li>
+
    </ul>
+   <a class="button button-glow button-border button-rounded button-primarybtn-xs" onclick="clickBtn();return false;"  data-href="/cancel/2">取消</a>
    <li class="other"></li>
     <script>
+    function  clickBtn() {
+      console.log($(this));//undefined
+     var data_href=$(this).attr("data-href");
+ }
          function print(param){
              console.log(param);
          }
